@@ -1,0 +1,149 @@
+<!DOCTYPE  html>
+<html lang="zh-cn">
+   <head>
+      <meta charset="utf-8"/>
+      <title>This is my title</title>
+      <style>
+         .leaf {
+             width:40px;
+             height:40px;
+         }
+         #bk {
+             width:600px;
+             height:600px;
+             margin:0 auto;
+             padding:20px;
+			 background: url(images/leaf_bk.jpg);
+         }
+
+         @keyframes myfirst {
+			 0%{transform:translateY(0) rotate3d(1,1,0,0deg);opacity: 0;}
+         	 5%{transform:translateY(0);opacity: 1}
+         	 50%{transform:translateY(285px) rotate3d(1,1,0,180deg);opacity: 1}
+         	 80%{transform:translateY(570px);opacity: 1}
+       	  	 
+        	 100%{transform:translateY(570px) rotate3d(1,1,0,360deg);opacity: 0;}
+         }
+         @keyframes mysecond {
+         }
+
+         #d1 {
+			 background: url(images/leaf.gif);
+			 position: absolute;
+			 animation-name: myfirst;
+			 animation-duration: 3s;
+			 animation-fill-mode: backwards;
+			 animation-iteration-count: infinite;
+			 animation-timing-function: linear;
+			 animation-play-state: running;
+         }
+
+         #d2 {
+			 background: url(images/leaf.gif);
+			 position: absolute;;
+			 left: 35%;
+			 animation-name: myfirst;
+			 animation-duration: 3s;
+			 animation-fill-mode: backwards;
+			 animation-iteration-count: infinite;
+			 animation-timing-function: linear;
+			 animation-play-state: running;
+			 animation-delay: 0.5s;
+         }
+
+         #d3 {
+			 background: url(images/leaf.gif);
+			 position: absolute;
+			 left: 45%;
+			 animation-name: myfirst;
+			 animation-duration: 3s;
+			 animation-fill-mode: backwards;
+			 animation-iteration-count: infinite;
+			 animation-timing-function: linear;
+			 animation-play-state: running;
+			 animation-delay: 0.7s;
+         }
+
+         #d4 {
+			 background: url(images/leaf.gif);
+			 position: absolute;
+			 left: 55%;
+			 animation-name: myfirst;
+			 animation-duration: 2s;
+			 animation-fill-mode: backwards;
+			 animation-iteration-count: infinite;
+			 animation-timing-function: linear;
+			 animation-play-state: running;
+			 animation-delay: 0.8s;
+         }
+
+         #d5 {
+			 background: url(images/leaf.gif);
+			 position: absolute;
+			 left: 65%;
+			 animation-name: myfirst;
+			 animation-duration: 2s;
+			 animation-fill-mode: backwards;
+			 animation-iteration-count: infinite;
+			 animation-timing-function: linear;
+			 animation-play-state: running;
+			 animation-delay: 2s;
+         }
+
+         #d6 {
+			 background: url(images/leaf.gif);
+			 position: absolute;
+			 left: 75%;
+			 animation-name: myfirst;
+			 animation-duration: 2s;
+			 animation-fill-mode: backwards;
+			 animation-iteration-count: infinite;
+			 animation-timing-function: linear;
+			 animation-play-state: running;
+			 animation-delay: 1s;
+         }
+
+         #d7 {
+			 background: url(images/leaf.gif);
+			 position: absolute;
+			 left: 85%;
+			 animation-name: myfirst;
+			 animation-duration: 3s;
+			 animation-fill-mode: backwards;
+			 animation-iteration-count: infinite;
+			 animation-timing-function: linear;
+			 animation-play-state: running;
+			 animation-delay: 2s;
+         }
+
+         #d8 {
+			 background: url(images/leaf.gif);
+			 position: absolute;
+			 left: 95%;
+			 animation-name: myfirst;
+			 animation-duration: 2s;
+			 animation-fill-mode: backwards;
+			 animation-iteration-count: infinite;
+			 animation-timing-function: linear;
+			 animation-play-state: running;
+			 animation-delay: 1.5s;
+         }
+
+      </style>
+   </head>
+   <body>
+    <div id="bk">
+      <div id="d1" class="leaf"></div>
+      <div id="d2" class="leaf"></div>
+      <div id="d3" class="leaf"></div>
+      <div id="d4" class="leaf"></div>
+      <div id="d5" class="leaf"></div>
+      <div id="d6" class="leaf"></div>
+      <div id="d7" class="leaf"></div>
+      <div id="d8" class="leaf"></div>
+    </div>
+    </body>
+</html>
+         
+
+                

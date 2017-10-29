@@ -1,0 +1,105 @@
+﻿<!DOCTYPE  html>
+<html lang="zh-cn">
+   <head>
+      <meta charset="utf-8"/>
+      <title>This is my title</title>
+      <style>
+         #container {
+			 width: 500px;
+			 height: 600px;
+			 margin: 0 auto;
+			 background-color: rgb(238,238,238);
+			 position: relative;
+         }
+         #food {
+			 width: 350px;
+			 height: 350px;
+			 position: absolute;
+			 bottom: 5%;
+			 right: 5%;
+			 background: white;
+         }
+         #title {
+			 padding-top: 20px;
+			 text-align: center;
+			 font-size: 30px;
+			 font-weight: bolder;
+         }
+         #description {
+			 padding-top: 20px;
+			 padding-left: 50px;
+			 padding-right: 50px;
+			 font-family: 楷体;
+			 font-size: 20px;
+         }
+
+         .part {
+			 margin: 5px;
+			 width: 168px;
+			 height: 168px;
+			 background: url(images/food.jpg);
+         }
+         #p1 {
+			 position: absolute;
+			 animation-name: myfirst;
+			 animation-duration: 2s;
+			 animation-timing-function: linear;
+         }
+         #p2 {
+			 background-position: 50% 0;
+			 position: absolute;
+			 left: 50%;
+			 animation-name: mysecond;
+			 animation-duration: 2s;
+			 animation-timing-function: linear;
+         }
+         #p3 {
+			 background-position: 0 100%;
+			 position: absolute;
+			 top: 50%;
+			 animation-name: mythird;
+			 animation-duration: 2s;
+			 animation-timing-function: linear;
+         }
+         #p4 {
+			 background-position: 50% 100%;
+			 position: absolute;
+			 top: 50%;
+			 left: 50%;
+			 animation-name: myfourth;
+			 animation-duration: 2s;
+			 animation-timing-function: linear;
+         }
+ 
+         @keyframes myfirst{
+			 0%{top: -25%;left: -25%;}
+			 100%{top: 0%;left: 0%};
+          }
+         @keyframes mysecond{
+			 0%{top: -25%;left: 75%;}
+			 100%{top: 0%;left: 50%;}
+          }
+         @keyframes mythird{
+			 0%{top: 75%;left: -25%;}
+			 100%{top: 50%;left: 0%;}
+          }
+         @keyframes myfourth{
+			 0%{top: 75%;left: 75%;}
+			 100%{top: 50%;left: 50%;}
+          }
+
+      </style>
+   </head>
+   <body>
+     <div id="container">
+        <div id="title">美食</div>
+        <div id="description">这是一款意大利牛肉卷，采用了熏牛肉、奶酪、酱进行烹制，色泽诱人，美味可口，欢迎大家前来品尝!</div>
+        <div id="food">
+           <div id="p1" class="part"></div>
+           <div id="p2" class="part"></div>
+           <div id="p3" class="part"></div>
+           <div id="p4" class="part"></div>
+        </div>
+     </div>
+    </body>
+</html>

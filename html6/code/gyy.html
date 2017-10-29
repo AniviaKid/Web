@@ -1,0 +1,51 @@
+﻿<!DOCTYPE  html>
+<html lang="zh-cn">
+   <head>
+      <meta charset="utf-8"/>
+      <title>This is my title</title>
+      <style>
+          #container {
+             width:500px;
+             height:700px;
+             margin:10px auto;
+             padding:1px
+          }
+          #profile {
+             width:340px;
+			  margin-left: -70px;
+			  margin-top: -70px;
+			  transform: rotateZ(45deg) scale(0.8);
+			  opacity: 1;
+          }
+		  #d1{
+			  width: 190px;
+			  height: 190px;
+			  border: solid 1px blue;
+			  border-radius: 5% 0 0 0;
+			  overflow: hidden;
+			  position: absolute;
+			  top: 40%;
+			  left: 40%;
+			  transform: rotateZ(-45deg);
+			  animation-name: WeiXiao;
+			  animation-duration: 3s;
+			  animation-timing-function: ease-in-out;
+			  animation-play-state: running;
+			  opacity: 1;
+		  }
+		  @keyframes WeiXiao{
+			  0%{transform: rotateZ(0deg) scale(0.2);opacity: 0;}
+			  50%{transform: rotateZ(135deg) scale(0.6);opacity: 0.2;}
+			  100%{transform: rotateZ(315deg) scale(1);opacity: 1;}
+		  }
+      </style>
+   </head>
+   <body>
+      <div id="container">
+         <div id="d1">
+            <img id="profile" src="images/gyy_profile.jpg">
+         </div>
+      </div>
+    </body>
+</html>
+            
