@@ -1,0 +1,32 @@
+<!DOCTYPE  html>
+<html  lang="zh-cn">
+<head>
+  <title>验证正确性</title>
+  <script>
+ 	function func(){
+		var edit1=document.getElementById("pass1").value;
+		var edit2=document.getElementById("pass2").value;
+		if(edit1==edit2){
+			console.info("true");
+			return true;
+		}
+		else{
+			console.info("false");
+			alert("两次输入的密码不相同");
+			return false;
+		}
+	}
+  </script>
+  <style>
+	  
+	</style>
+</head>
+<body>
+  <h1 style="text-align:center">验证正确性</h1>
+  <form action="OK.jsp" method="post"">
+       <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码：<input type="password" id="pass1"></p>
+       <p>重输入密码：<input type="password" id="pass2"></p>
+       <p style="text-align:center"><input type="submit" value="提交" onclick="return func()"></p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJAX-post</title>
+  <style>
+    p {font-size:20px}
+  </style>
+</head>
+<body>
+  <h1>Ajax-post</h1>
+  <p>id：<input id="t1" type="text"></p>
+  <p>姓名：<input id="t2" type="text" onblur="func()"></p>
+  <p><span id="t4"></span></p>
+  <script>
+	  function func() {
+			var t1 = document.getElementById('t1')
+			var t2 = document.getElementById('t2')
+			var t4 = document.getElementById('t4')
+			if(t1.value == '')
+				t4.innerHTML = '请输入id'
+			else if(t2.value == '')
+				t4.innerHTML = '请输入姓名'
+			else {
+				var xmlhttp = new XMLHttpRequest()
+				xmlhttp.onreadystatechange = function() {
+					if(xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						t4.innerHTML = xmlhttp.responseText
+					}
+				}
+				xmlhttp.open('post', 'post.jsp?id=' + t1.value + '&name=' + t2.value, true)
+				xmlhttp.send()
+			}
+		}
+  </script>
+</body>
+</html>

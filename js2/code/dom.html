@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+<style>
+p {font-size:20px}
+</style>
+</head>
+<script>
+	window.onload=function(){
+		var h1=document.createElement("h1");
+		var h1_text=document.createTextNode("静夜思");
+		h1.appendChild(h1_text);
+		document.body.appendChild(h1);
+		var firstline=document.createElement("p");
+		var text1=document.createTextNode("床前明月光");
+		var span1=document.createElement("span");
+		var span_text1=document.createTextNode("⑴");
+		var text2=document.createTextNode(",疑是地上霜");
+		var span2=document.createElement("span");
+		var span_text2=document.createTextNode("⑵");
+		var text3=document.createTextNode("。");
+		span1.appendChild(span_text1);
+		span2.appendChild(span_text2);
+		firstline.appendChild(text1);
+		firstline.appendChild(span1);
+		firstline.appendChild(text2);
+		firstline.appendChild(span2);
+		firstline.appendChild(text3);
+		var span1_style=document.createAttribute("style");
+		span1_style.value="vertical-align:super;font-size:12px";
+		span1.setAttributeNode(span1_style);
+		var span2_style=document.createAttribute("style");
+		span2_style.value="vertical-align:super;font-size:12px";
+		span2.setAttributeNode(span2_style);
+		document.body.appendChild(firstline);
+		var secondline=firstline.cloneNode(true);
+		secondline.childNodes[0].nodeValue="举头望明月";
+		secondline.childNodes[1].childNodes[0].nodeValue="⑶";
+		secondline.childNodes[2].nodeValue=",低头思故乡";
+		secondline.childNodes[3].childNodes[0].nodeValue="⑷"
+		document.body.appendChild(secondline);
+	}
+	</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slider</title>
+<style>
+		#SlideMain {
+			margin: 0 auto;
+			width: 770px;
+			overflow: hidden;
+		}
+
+		#Slides {
+			width: 3080px;
+			height: 300px;
+			white-space:nowrap;
+			position: relative;
+		}
+
+		.SlidesChange1 {
+			animation-name:SlideChange1;
+			animation-duration:1s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+			z-index: -1;
+		}
+
+		@keyframes SlideChange1{
+			0% {left: 0px;}
+			100% {left: -770px;}
+		}
+
+		.SlidesChange2 {
+			animation-name:SlideChange2;
+			animation-duration:1s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+			z-index: -1;
+		}
+
+		@keyframes SlideChange2{
+			0% {left: -770px;}
+			100% {left: -1540px;}
+		}
+
+		.SlidesChange3 {
+			animation-name:SlideChange3;
+			animation-duration:1s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+			z-index: -1;
+		}
+
+		@keyframes SlideChange3{
+			0% {left: -1540px;}
+			99.999999% {left: -2310px;}
+			100% {left: 0px;}
+		}
+
+		#Point {
+			width: 36px;
+			height: 12px;
+			position: relative;
+			left: 85%;
+			top: -30px;
+			overflow: hidden;
+		}
+
+		.PointInitial>#Point1 {
+			animation-name:PointIni;
+			animation-duration:0.001s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+
+		.PointSlidesChange1>#Point1 {
+			animation-name:PointOut;
+			animation-duration:1s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+
+		.PointSlidesChange1>#Point2 {
+			animation-name:PointIn;
+			animation-duration:1s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+
+		.PointSlidesChange2>#Point2 {
+			animation-name:PointOut;
+			animation-duration:1s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+
+		.PointSlidesChange2>#Point3 {
+			animation-name:PointIn;
+			animation-duration:1s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+
+		.PointSlidesChange3>#Point1 {
+			animation-name:PointIn;
+			animation-duration:1s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+
+		.PointSlidesChange3>#Point3 {
+			animation-name:PointOut;
+			animation-duration:1s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+
+		@keyframes PointOut{
+			0% {top: -24px;}
+			98% {top: -24px;}
+			99% {top: -12px;}
+			100% {top: 0px;}
+		}
+
+		@keyframes PointIn {
+			0% {top: 0px;}
+			98% {top: 0px;}
+			99% {top: -12px;}
+			100% {top: -24px;}
+		}
+
+		@keyframes PointIni {
+			0% {top: 0px;}
+			100% {top: -24px;}
+		}
+
+		.ClickSlideChange1 {
+			animation-name:SlideChange3;
+			animation-duration:0.001s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+		.ClickPointChange1>#Point1 {
+			animation-name:PointIn;
+			animation-duration:0.001s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+		.ClickSlideChange2 {
+			animation-name:SlideChange1;
+			animation-duration:0.001s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+		.ClickPointChange2>#Point2 {
+			animation-name:PointIn;
+			animation-duration:0.001s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+		.ClickSlideChange3 {
+			animation-name:SlideChange2;
+			animation-duration:0.001s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+		.ClickPointChange3>#Point3 {
+			animation-name:PointIn;
+			animation-duration:0.001s;
+			animation-timing-function:linear;
+			animation-iteration-count:1;
+			animation-fill-mode:forwards;
+			animation-play-state:running;
+			position: relative;
+		}
+
+		#LeftButton {
+			width: 32px;
+			height: 80px;
+			bottom: 200px;
+			left: 20px;
+			overflow: hidden;
+			position: relative;
+		}
+		#RightButton {
+			width: 32px;
+			height: 80px;
+			bottom: 280px;
+			left: 718px;
+			overflow: hidden;
+			position: relative;
+		}
+		.LeftButtonInitial {
+			position: relative;
+		}
+
+		.RightButtonInitial {
+			bottom: 80px;
+			position: relative;
+		}
+		.ButtonHidden {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<script language="JavaScript" type="text/javascript">
+		var i = 0;
+		var start = true;
+		function SliderTimer() {
+			if( start ) {
+				i++;
+			}
+			var Slider = document.getElementById("Slides");
+			var PointSlider = document.getElementById("PointSlides");
+			if( i%12 == 4 || i%12 == 8 || i%12 == 0 ) {
+				Slider.classList.remove("SlidesChange1", "SlidesChange2", "SlidesChange3", "ClickSlideChange1", "ClickSlideChange2", "ClickSlideChange3");
+				PointSlider.classList.remove("PointInitial", "PointSlidesChange1", "PointSlidesChange2", "PointSlidesChange3", "ClickPointChange1", "ClickPointChange2", "ClickPointChange3");
+			}
+			if( i%12 == 4 ) {
+				Slider.classList.add("SlidesChange1");
+				PointSlider.classList.add("PointSlidesChange1");
+			}
+			else if( i%12 == 8 ) {
+				Slider.classList.add("SlidesChange2");
+				PointSlider.classList.add("PointSlidesChange2");
+			}
+			else if( i%12 == 0 ) {
+				Slider.classList.add("SlidesChange3");
+				PointSlider.classList.add("PointSlidesChange3");
+			}
+			window.setTimeout(SliderTimer, 1000);
+		}
+		var id=setTimeout(SliderTimer, 0);
+		function MouseOver() {
+			start = false;
+			document.getElementById("Slides").style.animationPlayState="paused";
+			document.getElementById("Point1").style.animationPlayState="paused";
+			document.getElementById("Point2").style.animationPlayState="paused";
+			document.getElementById("Point3").style.animationPlayState="paused";
+			document.getElementById("LeftButton").classList.remove("ButtonHidden");
+			document.getElementById("RightButton").classList.remove("ButtonHidden");
+		}
+		function MouseOut() {
+			start = true;
+			document.getElementById("Slides").style.animationPlayState="running";
+			document.getElementById("Point1").style.animationPlayState="running";
+			document.getElementById("Point2").style.animationPlayState="running";
+			document.getElementById("Point3").style.animationPlayState="running";
+			document.getElementById("LeftButton").classList.add("ButtonHidden");
+			document.getElementById("RightButton").classList.add("ButtonHidden");
+		}
+		function ClickPoint1() {
+			var Slider = document.getElementById("Slides");
+			var PointSlider = document.getElementById("PointSlides");
+			Slider.classList.remove("SlidesChange1", "SlidesChange2", "SlidesChange3", "ClickSlideChange1", "ClickSlideChange2", "ClickSlideChange3");
+			PointSlider.classList.remove("PointInitial", "PointSlidesChange1", "PointSlidesChange2", "PointSlidesChange3", "ClickPointChange1", "ClickPointChange2", "ClickPointChange3");
+			Slider.classList.add("ClickSlideChange1");
+			PointSlider.classList.add("ClickPointChange1");
+			document.getElementById("Slides").style.animationPlayState="running";
+			document.getElementById("Point1").style.animationPlayState="running";
+			document.getElementById("Point2").style.animationPlayState="running";
+			document.getElementById("Point3").style.animationPlayState="running";
+			i=1;
+		}
+		function ClickPoint2() {
+			var Slider = document.getElementById("Slides");
+			var PointSlider = document.getElementById("PointSlides");
+			Slider.classList.remove("SlidesChange1", "SlidesChange2", "SlidesChange3", "ClickSlideChange1", "ClickSlideChange2", "ClickSlideChange3");
+			PointSlider.classList.remove("PointInitial", "PointSlidesChange1", "PointSlidesChange2", "PointSlidesChange3", "ClickPointChange1", "ClickPointChange2", "ClickPointChange3");
+			Slider.classList.add("ClickSlideChange2");
+			PointSlider.classList.add("ClickPointChange2");
+			document.getElementById("Slides").style.animationPlayState="running";
+			document.getElementById("Point1").style.animationPlayState="running";
+			document.getElementById("Point2").style.animationPlayState="running";
+			document.getElementById("Point3").style.animationPlayState="running";
+			i=5;
+		}
+		function ClickPoint3() {
+			var Slider = document.getElementById("Slides");
+			var PointSlider = document.getElementById("PointSlides");
+			Slider.classList.remove("SlidesChange1", "SlidesChange2", "SlidesChange3", "ClickSlideChange1", "ClickSlideChange2", "ClickSlideChange3");
+			PointSlider.classList.remove("PointInitial", "PointSlidesChange1", "PointSlidesChange2", "PointSlidesChange3", "ClickPointChange1", "ClickPointChange2", "ClickPointChange3");
+			Slider.classList.add("ClickSlideChange3");
+			PointSlider.classList.add("ClickPointChange3");
+			document.getElementById("Slides").style.animationPlayState="running";
+			document.getElementById("Point1").style.animationPlayState="running";
+			document.getElementById("Point2").style.animationPlayState="running";
+			document.getElementById("Point3").style.animationPlayState="running";
+			i=9;
+		}
+		function LeftButtonClick() {
+			if( i >= 1 && i <= 4 )
+				ClickPoint3();
+			else if( i >= 5 && i <= 8 )
+				ClickPoint1();
+			else
+				ClickPoint2();
+		}
+		function RightButtonClick() {
+			if( i >= 1 && i <= 4 )
+				ClickPoint2();
+			else if( i >= 5 && i <= 8 )
+				ClickPoint3();
+			else
+				ClickPoint1();
+		}
+	</script>
+	<div>
+		<div id="SlideMain" onmouseover="MouseOver()" onmouseout="MouseOut()">
+		<div id="Slides">
+			<img class="Slide" src="./images/img1.jpg"><img class="Slide" src="./images/img2.jpg"><img class="Slide" src="./images/img3.jpg"><img class="Slide" src="./images/img1.jpg">
+		</div>
+		<div id="Point">
+			<div id="PointSlides" class="PointInitial">
+				<img id="Point1" src="./images/navigator.png" onclick="ClickPoint1()"><img id="Point2" src="./images/navigator.png" onclick="ClickPoint2()"><img id="Point3" src="./images/navigator.png" onclick="ClickPoint3()">
+			</div>
+		</div>
+		<div id="LeftButton" class="ButtonHidden">
+			<img src="./images/arrows-30.png" class="LeftButtonInitial" onclick="LeftButtonClick()">
+		</div>
+		<div id="RightButton" class="ButtonHidden">
+			<img src="./images/arrows-30.png" class="RightButtonInitial" onclick="RightButtonClick()">
+		</div>
+	</div>
+	</div>
+</body>
+</html>
